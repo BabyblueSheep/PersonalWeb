@@ -1,0 +1,98 @@
+:root {
+    --white: #FFF;
+    --silver: #DDD;
+    --gray: #AAA;
+}
+/*fonts*/
+@font-face {
+    font-family: headerText;
+    src: local('eurofurence  regular'), url('eurof55.woff') format('woff');
+}
+@font-face {
+    font-family: mainText;
+    src: local('eurofurence  regular'), url('monof55.woff') format('woff');
+}
+/*keyframes*/
+@keyframes hoverIn {
+    from {
+        color:var(--gray);
+    }
+    to {
+        color:var(--silver);
+    }
+}
+@keyframes hoverOut {
+    from {
+        color:var(--silver);
+    }
+    to {
+        color:var(--gray);
+    }
+}
+/*header*/
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.headertext {
+    font-family: headerText, monospace;
+    font-size: x-large;
+}
+/*main parts*/
+body {
+    background: url('bg.png') no-repeat center fixed;
+    background-size: cover;
+    background-color:midnightblue;
+    margin: 0;
+}
+header {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 4vh;
+    border-bottom: 2px solid var(--gray);;
+}
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 4vh;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-top: 2px solid var(--gray);;
+}
+/*text*/
+.maintext {
+    font-family: mainText, san-serif;
+    color:var(--white);
+    text-align: center;
+}
+.mainhyperlink {
+    color:lightslategray;
+    animation: 0.2s forwards;
+}
+.mainhyperlink.animate {
+    animation-name: hoverOut;
+}
+.mainhyperlink:hover {
+    animation: hoverIn 0.2s forwards;
+}
+.infotext {
+    font-family: monospace;
+    color:var(--white);
+    background-color: black;
+    border-radius: 5px;
+    padding: 5px;
+}
+a {
+    text-decoration: none;
+}
+/*images*/
+#pfp {
+    border-radius: 100%;
+    box-shadow: 0 0 10px white;   
+    vertical-align: middle;   
+}
