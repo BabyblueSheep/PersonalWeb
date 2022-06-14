@@ -6,11 +6,11 @@
 /*fonts*/
 @font-face {
     font-family: headerText;
-    src: local('eurofurence  regular'), url('eurof55.woff') format('woff');
+    src: url('monof55.woff') format('woff');
 }
 @font-face {
     font-family: mainText;
-    src: local('eurofurence  regular'), url('monof55.woff') format('woff');
+    src: url('cream-DEMO.ttf') format('truetype');
 }
 /*keyframes*/
 @keyframes hoverIn {
@@ -36,12 +36,12 @@
     align-items: center;
 }
 .headertext {
-    font-family: headerText, monospace;
     font-size: x-large;
 }
 /*main parts*/
 body {
     background: url('bg.png') no-repeat center fixed;
+    background-position: fixed;
     background-size: cover;
     background-color:midnightblue;
     margin: 0;
@@ -52,12 +52,14 @@ header {
     left: 0;
     right: 0;
     top: 0;
-    padding: 4vh;
+    font-family: headerText, monospace;
+    padding: 2em;
     border-bottom: 2px solid var(--gray);;
 }
 footer {
     background: rgba(0, 0, 0, 0.8);
-    padding: 4vh;
+    font-family: headerText, monospace;
+    padding: 2em;
     position: fixed;
     left: 0;
     right: 0;
@@ -66,12 +68,17 @@ footer {
 }
 /*text*/
 .maintext {
-    font-family: mainText, san-serif;
+    font-family: monospace;
+    font-size: large;
     color:var(--white);
     text-align: center;
+    margin:1em auto;
+    max-width:40em;
+    padding:0 .62em;
 }
 .mainhyperlink {
-    color:lightslategray;
+    color:var(--gray);
+    font-weight: bold;
     animation: 0.2s forwards;
 }
 .mainhyperlink.animate {
@@ -82,6 +89,7 @@ footer {
 }
 .infotext {
     font-family: monospace;
+    font-weight: bold;
     color:var(--white);
     background-color: black;
     border-radius: 5px;
